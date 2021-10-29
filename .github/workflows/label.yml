@@ -20,6 +20,4 @@ jobs:
         with:
           add-labels: "needs triage"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          add-labels: "triage"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      
