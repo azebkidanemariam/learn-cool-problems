@@ -51,10 +51,21 @@ const morseAlphabet = {
 // eg. quick -> --.- ..- .. -.-. -.-
 // (a space should separate the mores letters in returned string, eg. ab -> .- -...  Notice the space!)
 
-export const morseCode = (s) => {
-  // Your code here...
-  return ''
-}
+ export const morseCode = (s) => {
+   let word = ''
+
+   for (let i = 0; i < s.length; i++) {
+     const letter = s[i].toLowerCase()
+     if(s[i] == ' ') {
+       word += ' ' 
+     }
+     if(letter in morseAlphabet) {
+       word +=  morseAlphabet[letter] + ' '
+     }
+   }
+   console.log(word)
+   return word.trim()
+ }
 
 const tests = [
   [morseCode, ['abc'], '.- -... -.-.'],
